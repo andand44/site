@@ -95,9 +95,12 @@ button {
             background-color: inherit;
 
             .icon {
-                margin-right: 14px;
                 font-size: 18px;
                 transition: all .3s;
+                + span {
+                    margin-left: 14px;
+                    display: inline-flex;
+                }
             }
 
             span {
@@ -210,6 +213,16 @@ button {
     }
 
     &-filter {
+        &-view {
+            &-link {
+                margin-right: 10px;
+            }
+        }
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         &-range {
             display: flex;
 
@@ -598,6 +611,9 @@ button {
             right: 20px;
             color: #fff;
             background-color: var(--red);
+            &.edit {
+                background-color: var(--dark3);
+            }
 
             .icon {
                 color: #fff;
@@ -1178,6 +1194,9 @@ h3,
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &-label {
